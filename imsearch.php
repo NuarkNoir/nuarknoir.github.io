@@ -1,19 +1,16 @@
-<!DOCTYPE html><!-- HTML5 -->
+<?php require_once("res/x5engine.php"); ?><!DOCTYPE html><!-- HTML5 -->
 <html prefix="og: http://ogp.me/ns#" lang="ru-RU" dir="ltr">
 	<head>
-		<title>Welcome|MainPage - nuarknoir_github_io</title>
+		<title>Поиск - nuarknoir_github_io</title>
 		<meta charset="utf-8" />
 		<!--[if IE]><meta http-equiv="ImageToolbar" content="False" /><![endif]-->
 		<meta name="author" content="Nuark.Noir" />
 		<meta name="generator" content="Incomedia WebSite X5 Professional 12.0.1.15 - www.websitex5.com" />
-		<meta name="description" content="Main page of Nuark.Noir`s GDCP Command`s Site" />
-		<meta name="keywords" content="GDCP, Nuark" />
 		<meta property="og:locale" content="ru-RU" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://nuarknoir.github.io/index.html" />
-		<meta property="og:title" content="Главная" />
+		<meta property="og:url" content="http://nuarknoir.github.io/imsearch.php" />
+		<meta property="og:title" content="Поиск" />
 		<meta property="og:site_name" content="nuarknoir_github_io" />
-		<meta property="og:description" content="Main page of Nuark.Noir`s GDCP Command`s Site" />
 		<meta property="og:image" content="http://nuarknoir.github.io/favImage.png" />
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:image:width" content="1000">
@@ -26,8 +23,7 @@
 		<link rel="stylesheet" type="text/css" href="style/template.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="style/menu.css" media="screen" />
 		<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="style/ie.css" media="screen" /><![endif]-->
-		<link rel="stylesheet" type="text/css" href="pcss/index.css" media="screen" />
-		<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="pcssie/index.css" media="screen" /><![endif]-->
+		
 		<script type="text/javascript" src="res/jquery.js?15"></script>
 		<script type="text/javascript" src="res/x5engine.js?15"></script>
 		<script type="text/javascript">
@@ -40,7 +36,7 @@
 		<div id="imFooterBg"></div>
 		<div id="imPage">
 			<div id="imHeader">
-				<h1 class="imHidden">Welcome|MainPage - nuarknoir_github_io</h1>
+				<h1 class="imHidden">Поиск - nuarknoir_github_io</h1>
 				
 			</div>
 			<a class="imHidden" href="#imGoToCont" title="Заголовок главного меню">Перейти к контенту</a>
@@ -49,7 +45,7 @@
 			<div id="imMnMn" class="auto">
 				<div class="hamburger-site-background menu-mobile-hidden"></div><div class="hamburger-button"><div><div><div class="hamburger-bar"></div><div class="hamburger-bar"></div><div class="hamburger-bar"></div></div></div></div><div class="hamburger-menu-background-container"><div class="hamburger-menu-background menu-mobile-hidden"><div class="hamburger-menu-close-button"><span>&times;</span></div></div></div>
 				<ul class="auto menu-mobile-hidden">
-					<li id="imMnMnNode0" class="imPage imMnMnCurrent">
+					<li id="imMnMnNode0" class=" imPage">
 						<a href="index.html">
 							<span class="imMnMnFirstBg">
 								<span class="imMnMnTxt"><span class="imMnMnImg"></span><span class="imMnMnTextLabel">Главная</span></span>
@@ -84,16 +80,15 @@
 			<div id="imContentGraphics"></div>
 			<div id="imContent">
 				<a id="imGoToCont"></a>
-				<div id="imCell_1"><div id="imCellStyleGraphics_1"></div><div id="imCellStyle_1" data-responsive-sequence-number="1"><div id="imTableObject_1">
-					<div class="text-tab-content"  id="imTableObject_1_tab0" style="text-align: left;">
-						<div class="text-inner">
-							<table data-minrequestedwidth="315" data-computedwidth="315" style="width: 315px;"><tbody><tr><td style="width: 307px; height: 84px;" class="imVc">Покачто здесь ничего нет. Но ты можешь подписаться на мой канал на ЮТубе или через футер попасть на мои страницы. Ну или путешествуй по сайту и ищи баги)</td></tr><tr><td style="height: 168px; width: 307px;" class="imVc"><div style="text-align: center;"><script src="https://apis.google.com/js/platform.js"></script></div><div><br></div><div style="text-align: center;"><div class="g-ytsubscribe" data-channelid="UCrQhLIkDCkZ9uCsLYfMU_nw" data-layout="full" data-theme="dark" data-count="default"></div></div></td></tr></tbody></table>
-						</div>
-					</div>
-				
-				</div>
-				</div></div>
-				<div id="imFooPad" style="height: 240px; float: left;">&nbsp;</div><div id="imBtMn"><a href="index.html">Главная</a> | <a href="sr34.html">Проекты</a> | <a href="chat.html">DevZone</a> | <a href="imsitemap.html">Главная Карта Сайта</a></div>
+				<h2 id="imPgTitle">Результаты поиска</h2><?php
+$search = new imSearch();
+$keys = isset($_GET['search']) ? $_GET['search'] : "";
+$page = isset($_GET['page']) ? $_GET['page'] : 0;
+$type = isset($_GET['type']) ? $_GET['type'] : "pages"; ?>
+<div class="searchPageContainer">
+<?php echo $search->search($keys, $page, $type); ?>
+</div>
+
 				<div class="imClear"></div>
 			</div>
 			<div id="imFooter">

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>MLP</title>
+   	<link>..</link>
+        <generator>jAlbum 13</generator>
+   		<description></description>
+        <jalbum:absolutePath>http://ftp://192.168.43.3:1337/MLP/</jalbum:absolutePath>
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/maneSix/album.rss" title="maneSix" thumbnail="http://ftp://192.168.43.3:1337/MLP/maneSix/Applejack/thumbs/ga0xhNWNWqs.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Arts/album.rss" title="Arts" thumbnail="http://ftp://192.168.43.3:1337/MLP/Arts/thumbs/Cxy58e2hV5k.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/album.rss" title="FoxInShadows" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.1/thumbs/XydRG9w0dL0.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/album.rss" title="Other Ponies" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Cutie Mark Crusaders/thumbs/zT1tO2zTzgY.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Posters/album.rss" title="Posters" thumbnail="http://ftp://192.168.43.3:1337/MLP/Posters/thumbs/EV3WILIXlng.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+        
+    </channel>
+</rss>

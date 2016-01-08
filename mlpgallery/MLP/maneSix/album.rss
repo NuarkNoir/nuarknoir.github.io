@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>maneSix</title>
+   	<link>../..</link>
+        <generator>jAlbum 13</generator>
+   		<description></description>
+        <jalbum:absolutePath>http://ftp://192.168.43.3:1337/MLP/maneSix/</jalbum:absolutePath>
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/maneSix/Applejack/album.rss" title="Applejack" thumbnail="http://ftp://192.168.43.3:1337/MLP/maneSix/Applejack/thumbs/ga0xhNWNWqs.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/maneSix/Fluttershy/album.rss" title="Fluttershy" thumbnail="http://ftp://192.168.43.3:1337/MLP/maneSix/Fluttershy/thumbs/2WyTmS1Tbpg.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/maneSix/Pinkie Pie/album.rss" title="Pinkie Pie" thumbnail="http://ftp://192.168.43.3:1337/MLP/maneSix/Pinkie Pie/thumbs/8yHpdZjhNPw.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/maneSix/Rainbow Dash/album.rss" title="Rainbow Dash" thumbnail="http://ftp://192.168.43.3:1337/MLP/maneSix/Rainbow Dash/thumbs/KwqISWY6oBI.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/maneSix/Rarity/album.rss" title="Rarity" thumbnail="http://ftp://192.168.43.3:1337/MLP/maneSix/Rarity/thumbs/kVRrnkPPDBo.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/maneSix/Twilight Sparkle/album.rss" title="Twilight Sparkle" thumbnail="http://ftp://192.168.43.3:1337/MLP/maneSix/Twilight Sparkle/thumbs/cSy3dJSrqM4.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+        
+    </channel>
+</rss>

@@ -1,0 +1,1802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">	
+	<head>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		<title>N.Noir`s ML-Album &raquo; MLP &raquo; maneSix &raquo; Applejack</title>
+				
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="title" content="N.Noir`s ML-Album" />
+<meta name="keywords" content="N.Noir`s ML-Album, Applejack, jAlbum 13, Galleria" />
+<meta name="description" content="N.Noir`s ML-Album" />
+<meta property="og:title" content="N.Noir`s ML-Album" />
+<meta property="og:site_name" content="Jalbum" />
+<meta property="fb:app_id" content="140299612674733" />
+		<link href="../../../res/galleria/galleria.css" rel="stylesheet" type="text/css" />
+		<link href="../../../res/index.css" rel="stylesheet" type="text/css" />		
+		<link href="../../../res/common.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+	.thumbnails li {
+		width: 90px;
+		height: 90px;
+	}
+
+	#middle_container {
+		height: 510px;
+	}
+
+	#scroller_container {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		width: 812px;	
+	}
+
+	#image_scroller {
+		margin: 0 10px 0 20px;
+		width: 742px;
+	}
+	
+	#thumbnails_container {
+		width: 14628px;
+	}
+	
+	#scroller_container,
+	#image_scroller,
+	#thumbnails_container {
+		height: 106px;
+	}
+	
+	#folders_container {
+		;
+	}		
+	
+	.folders {
+		width: 0px;
+	}
+	
+	.folders li {
+		width: 106px;
+		height: 106px;
+	}
+	
+	.caption,
+	.description {
+		width: 742px;
+	}
+</style>
+		<script src="../../../res/jquery.js" type="text/javascript"></script>
+			<script src="../../../res/jquery.hotkeys.js" type="text/javascript"></script>
+	<script src="../../../res/galleria/jquery.galleria.js" type="text/javascript"></script>
+	<script src="../../../res/jquery.scrollimages.js" type="text/javascript"></script>	
+	<script type="text/javascript"><!--//--><![CDATA[//><!--	
+		$(function() {
+			$("#thumbnails_container").imageScroller({
+				onBeforeScroll: function() { $.galleria.stop() },
+				onScroll: function() { $.galleria.start() }, 
+				duration: 120, 
+				imageWidth: 106, 
+				size: 7,
+				fastSteps: 5
+			});
+			
+			var formattedThumbnailOpacity = 67/100;
+			
+			$(".thumbnails_unstyled").addClass("thumbnails");
+			$("ul.thumbnails").galleria({
+				history: false,
+				clickNext: true,
+				insert: "#main_image",
+				onImage: function(image, caption, thumb) {
+					var extras = $("#extras").css("display", "none").empty();
+					image.css("display", "none").fadeIn(500);
+					caption.css("display", "none").fadeIn(500);
+					
+					if (false) {
+						var extrasList = $("<ul></ul>");
+						extrasList.addMetadata("Дата", thumb.data("originalDate"));
+						extrasList.addMetadata("Фотоаппарат", thumb.data("cameraModel"));
+						extrasList.addMetadata("Экспозиция", thumb.data("exposureTime"));
+						extrasList.addMetadata("Чувствительность (ISO)", thumb.data("isoEquivalent"));
+						extrasList.addMetadata("Диафрагма", thumb.data("aperture"));
+						extrasList.addMetadata("Фокусное расстояние", thumb.data("focusDistance"));
+						extrasList.addMetadata("Эквивалентное фокусное расстояние", thumb.data("focalLength35mm"));
+						extrasList.addMetadata("Ключевые слова", thumb.data("keywords"));
+						if (extrasList.children().length > 0) {
+							extras.append(extrasList);						
+							extrasList.find(":first-child").addClass("first");
+							extras.css({ 
+								width : (image.outerWidth() - (5 * 2) + 100) + "px" 
+							}).fadeIn(500);
+						}
+					}
+					
+					var li = thumb.parents("li");
+					li.siblings().children("img.selected").fadeTo(500, formattedThumbnailOpacity);
+					thumb.fadeTo("fast", 1).addClass("selected");
+					image.attr("title", "Далее");
+					
+					var original = thumb.data("original");
+					if (original) {
+						var originalLink = $("<a></a>").attr("href", original).text("Скачать оригинал");
+						caption.append(" (").append(originalLink).append(")");
+					}
+				},
+				onThumb: function(thumb) {
+					var li = thumb.parents("li");
+					var fadeTo = li.is(".active") ? "1" : formattedThumbnailOpacity;
+					thumb.css({display: "none", opacity: fadeTo}).fadeIn(1500);
+					thumb.hover(
+						function() { 
+							thumb.fadeTo("fast", 1);		
+						},
+						function() {
+							li.not(".active").children("img").fadeTo("fast", formattedThumbnailOpacity);
+						}
+					)
+				},
+				preloads: 3,
+				fastSteps: 5,
+				onPrev: function() {
+					$.imageScroller.scrollLeft();
+				},
+				onNext: function() {
+					$.imageScroller.scrollRight();
+				},
+				onPrevFast: function() {
+					$.imageScroller.fastScrollLeft();
+				},
+				onNextFast: function() {
+					$.imageScroller.fastScrollRight();
+				},
+				enableSlideshow : false,
+				autostartSlideshow : false,
+				slideshowDelay : 3000,
+				onSlideshowPlayed : function() {
+					$('.play').hide();
+					$('.pause').show();	
+				},
+				onSlideshowPaused : function() {
+					$('.play').show();
+					$('.pause').hide();
+				}
+			});
+			
+			$.galleria.loader = $("<div></div>").addClass("loader").append($(new Image()).attr("src","../../../res/loader.gif").attr("title","Загрузка..."));
+			
+			prepareArrow = function(arrow) {
+				arrow.css({display: "none", opacity: 0.5, "padding-top": "28px"}).fadeIn( 1000);			
+				arrow.hover(
+					function() {
+						arrow.fadeTo("fast", 1);
+					},
+					function() {
+						arrow.fadeTo("fast", 0.5);			
+					}
+				);	
+			}
+			
+			var leftArrow = $("#left_arrow");
+			prepareArrow(leftArrow);
+			leftArrow.click(function() {
+				$.galleria.prev();	
+			});
+			
+			var rightArrow = $("#right_arrow");
+			prepareArrow(rightArrow);
+			rightArrow.click(function() {
+				$.galleria.next();
+			});
+			
+			if (false) {
+				var leftFastArrow = $("#left_fast_arrow");
+				prepareArrow(leftFastArrow);
+				leftFastArrow.click(function() {
+					$.galleria.prevFast();
+				});
+				
+				var rightFastArrow = $("#right_fast_arrow");
+				prepareArrow(rightFastArrow);
+				rightFastArrow.click(function() {
+					$.galleria.nextFast();
+				});
+			}
+		});
+
+		$(document).bind("keydown", "left", function() {
+			if (!KeyboardNavigation.widgetHasFocus()) {
+				$.galleria.prev();
+			}
+		});
+		$(document).bind("keydown", "right", function() {
+			if (!KeyboardNavigation.widgetHasFocus()) {
+				$.galleria.next();
+			}
+		});
+		$(document).bind("keydown", "space", function() {
+			if (!KeyboardNavigation.widgetHasFocus()) {
+				$.galleria.toggleSlideshow();
+			}
+		});
+
+		var KeyboardNavigation = {
+			widgetHasFocus: function() {
+				if(typeof _jaWidgetFocus != 'undefined' && _jaWidgetFocus) {
+					return true;
+				}
+				return false;
+			}
+		}
+	//--><!]]></script>
+
+	<link rel="alternate" href="album.rss" type="application/rss+xml"/>
+</head>
+	<body>
+		<div id="header">
+			<div id="top_container" class="border">
+						<h1><a href="../../../index.html">N.Noir`s ML-Album</a> &raquo; <a href="../../index.html">MLP</a> &raquo; <a href="../index.html">maneSix</a> &raquo; Applejack</h1>
+							
+					
+			</div>
+				
+		</div>
+<div id="main">
+		<div id="scroller_container">
+			<img class="hide" id="left_arrow" src="../../../res/left.png" alt="Прокрутка влево" title="Прокрутка влево" />					
+			<div id="image_scroller">
+				<ul id="thumbnails_container" class="thumbnails_unstyled">
+						<li class="active">
+										
+
+							<a href="slides/ga0xhNWNWqs.jpg" title="">
+										
+								<img src="thumbs/ga0xhNWNWqs.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:491;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/SyprUw6jYDU.jpg" title="">
+										
+								<img src="thumbs/SyprUw6jYDU.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:457</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/gdeWCvUGVfE.jpg" title="">
+										
+								<img src="thumbs/gdeWCvUGVfE.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:408;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/owU_DVKQBUE.jpg" title="">
+										
+								<img src="thumbs/owU_DVKQBUE.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/7gMx-CjmC5E.jpg" title="">
+										
+								<img src="thumbs/7gMx-CjmC5E.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:461</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/maTMyFodF1o.jpg" title="">
+										
+								<img src="thumbs/maTMyFodF1o.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/xwAzsz20Ypk.jpg" title="">
+										
+								<img src="thumbs/xwAzsz20Ypk.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:375</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/glw60jlLmZw.jpg" title="">
+										
+								<img src="thumbs/glw60jlLmZw.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:574;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Guw0iRcEMio.jpg" title="">
+										
+								<img src="thumbs/Guw0iRcEMio.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/i2runWvBAf8.jpg" title="">
+										
+								<img src="thumbs/i2runWvBAf8.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:351</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/s2HruaD4Yhk.jpg" title="">
+										
+								<img src="thumbs/s2HruaD4Yhk.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:360;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/TmSXUt13PM4.jpg" title="">
+										
+								<img src="thumbs/TmSXUt13PM4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:395;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/77c8gU2xQdI.jpg" title="">
+										
+								<img src="thumbs/77c8gU2xQdI.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:468</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/stCxbjzNpWU.jpg" title="">
+										
+								<img src="thumbs/stCxbjzNpWU.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/xWBvFGfwd74.jpg" title="">
+										
+								<img src="thumbs/xWBvFGfwd74.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:372</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/78UuVmRYDr4.jpg" title="">
+										
+								<img src="thumbs/78UuVmRYDr4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/dExrUKgtdTc.jpg" title="">
+										
+								<img src="thumbs/dExrUKgtdTc.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/ayA7EbeQotQ.jpg" title="">
+										
+								<img src="thumbs/ayA7EbeQotQ.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:565;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/suXyNGUooPg.jpg" title="">
+										
+								<img src="thumbs/suXyNGUooPg.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:378</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/_-dCTKt4cSY.jpg" title="">
+										
+								<img src="thumbs/_-dCTKt4cSY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Kz2j0DpZ9kA.jpg" title="">
+										
+								<img src="thumbs/Kz2j0DpZ9kA.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:453</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/vNSCEaH51xM.jpg" title="">
+										
+								<img src="thumbs/vNSCEaH51xM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:427</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/ULUDMsyeKn0.jpg" title="">
+										
+								<img src="thumbs/ULUDMsyeKn0.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:475</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/vA4cE2TwCB0.jpg" title="">
+										
+								<img src="thumbs/vA4cE2TwCB0.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:295;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/4Lg05M44g0M.jpg" title="">
+										
+								<img src="thumbs/4Lg05M44g0M.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:378;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/2kpw6eXTigA.jpg" title="">
+										
+								<img src="thumbs/2kpw6eXTigA.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:493;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/FptgGz5igwM.jpg" title="">
+										
+								<img src="thumbs/FptgGz5igwM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:618;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/5bNzkoY0wGo.jpg" title="">
+										
+								<img src="thumbs/5bNzkoY0wGo.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:423</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/sGw6bzFYPDs.jpg" title="">
+										
+								<img src="thumbs/sGw6bzFYPDs.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:340</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/IDL-fW6UhOY.jpg" title="">
+										
+								<img src="thumbs/IDL-fW6UhOY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:590;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/YX3p9LdrsMw.jpg" title="">
+										
+								<img src="thumbs/YX3p9LdrsMw.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:499;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/ms8GLupFr7c.jpg" title="">
+										
+								<img src="thumbs/ms8GLupFr7c.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:401</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/qejcMvyo-dE.jpg" title="">
+										
+								<img src="thumbs/qejcMvyo-dE.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:396;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/ZqUVKgIG4aU.jpg" title="">
+										
+								<img src="thumbs/ZqUVKgIG4aU.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:387;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/e4HM06v3x7U.jpg" title="">
+										
+								<img src="thumbs/e4HM06v3x7U.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:360;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/-sSnaHo7HlY.jpg" title="">
+										
+								<img src="thumbs/-sSnaHo7HlY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:371;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/zwUucQzZbLk.jpg" title="">
+										
+								<img src="thumbs/zwUucQzZbLk.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:505;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Zc0HsV34q8g.jpg" title="">
+										
+								<img src="thumbs/Zc0HsV34q8g.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/5tsLuz440Os.jpg" title="">
+										
+								<img src="thumbs/5tsLuz440Os.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:349</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/MMJtQQNpuhM.jpg" title="">
+										
+								<img src="thumbs/MMJtQQNpuhM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:400;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/ZRbSxoyBlzQ.jpg" title="">
+										
+								<img src="thumbs/ZRbSxoyBlzQ.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:399;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/vw0Xn8Ah2yg.jpg" title="">
+										
+								<img src="thumbs/vw0Xn8Ah2yg.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:359;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/hC8wZ0PY3hM.jpg" title="">
+										
+								<img src="thumbs/hC8wZ0PY3hM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:391;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/bjW2PaETKsc.jpg" title="">
+										
+								<img src="thumbs/bjW2PaETKsc.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/XDpc3bWL05g.jpg" title="">
+										
+								<img src="thumbs/XDpc3bWL05g.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:322;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/toaVAAbuwNM.jpg" title="">
+										
+								<img src="thumbs/toaVAAbuwNM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:471</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/C3FJbE70UQc.jpg" title="">
+										
+								<img src="thumbs/C3FJbE70UQc.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/B8tAh4eromk.jpg" title="">
+										
+								<img src="thumbs/B8tAh4eromk.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:340</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/LlKZsZ5EHt0.jpg" title="">
+										
+								<img src="thumbs/LlKZsZ5EHt0.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:367;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Fe7xdzaf1uI.jpg" title="">
+										
+								<img src="thumbs/Fe7xdzaf1uI.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:387;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/5nIpxs_S9lw.jpg" title="">
+										
+								<img src="thumbs/5nIpxs_S9lw.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:432;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/bPU9fovpV1s.jpg" title="">
+										
+								<img src="thumbs/bPU9fovpV1s.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:604;;height:340</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/JKwnaz3uh_I.jpg" title="">
+										
+								<img src="thumbs/JKwnaz3uh_I.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:339;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/oxPp2n-mlvE.jpg" title="">
+										
+								<img src="thumbs/oxPp2n-mlvE.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:584;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/lG1nnfKcEoE.jpg" title="">
+										
+								<img src="thumbs/lG1nnfKcEoE.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:396;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/ifIm1-6UCPE.jpg" title="">
+										
+								<img src="thumbs/ifIm1-6UCPE.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:428</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/4__H_CuHSm4.jpg" title="">
+										
+								<img src="thumbs/4__H_CuHSm4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:470;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/7ZOTJg78Hes.jpg" title="">
+										
+								<img src="thumbs/7ZOTJg78Hes.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:364;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/k5nRW7eVN1M.jpg" title="">
+										
+								<img src="thumbs/k5nRW7eVN1M.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:452</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/lOa-nmc5te0.jpg" title="">
+										
+								<img src="thumbs/lOa-nmc5te0.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/HnGgYPiNp-o.jpg" title="">
+										
+								<img src="thumbs/HnGgYPiNp-o.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:402</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Gfni8LoLcw0.jpg" title="">
+										
+								<img src="thumbs/Gfni8LoLcw0.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/9qjXlTxSgxU.jpg" title="">
+										
+								<img src="thumbs/9qjXlTxSgxU.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/0GNxrjoMCPY.jpg" title="">
+										
+								<img src="thumbs/0GNxrjoMCPY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/KGIgEL64e9Y.jpg" title="">
+										
+								<img src="thumbs/KGIgEL64e9Y.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/xE31C-nXC2E.jpg" title="">
+										
+								<img src="thumbs/xE31C-nXC2E.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:273</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/X5FEcLxr3zc.jpg" title="">
+										
+								<img src="thumbs/X5FEcLxr3zc.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:571;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/PKc8OsC1PDI.jpg" title="">
+										
+								<img src="thumbs/PKc8OsC1PDI.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:331;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/MrvryZo_6d8.jpg" title="">
+										
+								<img src="thumbs/MrvryZo_6d8.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:436</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/pVbYanvogfA.jpg" title="">
+										
+								<img src="thumbs/pVbYanvogfA.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:357</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/KP_oaQ1EPUQ.jpg" title="">
+										
+								<img src="thumbs/KP_oaQ1EPUQ.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:330</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/NOsbzjQ0OSg.jpg" title="">
+										
+								<img src="thumbs/NOsbzjQ0OSg.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/a5CDuuha7nY.jpg" title="">
+										
+								<img src="thumbs/a5CDuuha7nY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/rldwES3LzQ0.jpg" title="">
+										
+								<img src="thumbs/rldwES3LzQ0.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:360;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/_Sexa8ZFmdI.jpg" title="">
+										
+								<img src="thumbs/_Sexa8ZFmdI.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:414;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/8qCxCn6UvK4.jpg" title="">
+										
+								<img src="thumbs/8qCxCn6UvK4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:466</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/xvgraeTYe-E.jpg" title="">
+										
+								<img src="thumbs/xvgraeTYe-E.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/yUAesSttAS4.jpg" title="">
+										
+								<img src="thumbs/yUAesSttAS4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:410;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Fmfzc5XXHfM.jpg" title="">
+										
+								<img src="thumbs/Fmfzc5XXHfM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:416</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/12Zzql7o4-g.jpg" title="">
+										
+								<img src="thumbs/12Zzql7o4-g.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:391;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/txq8MXNyOpU.jpg" title="">
+										
+								<img src="thumbs/txq8MXNyOpU.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:371;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/VacwZ5yxGfE.jpg" title="">
+										
+								<img src="thumbs/VacwZ5yxGfE.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Dquv5vnyBbc.jpg" title="">
+										
+								<img src="thumbs/Dquv5vnyBbc.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:400</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/IBH4t_01W4M.jpg" title="">
+										
+								<img src="thumbs/IBH4t_01W4M.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:322;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/zqUh8CIW73o.jpg" title="">
+										
+								<img src="thumbs/zqUh8CIW73o.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:367;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/XZh3hPd1Uwk.jpg" title="">
+										
+								<img src="thumbs/XZh3hPd1Uwk.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:339;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/drwZRiGeSuw.jpg" title="">
+										
+								<img src="thumbs/drwZRiGeSuw.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/F5bTckewhsc.jpg" title="">
+										
+								<img src="thumbs/F5bTckewhsc.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:600;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/s8PFnEeidp8.jpg" title="">
+										
+								<img src="thumbs/s8PFnEeidp8.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:365</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/oLIcdaP_A0g.jpg" title="">
+										
+								<img src="thumbs/oLIcdaP_A0g.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:384;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Bn47Tbo4jWY.jpg" title="">
+										
+								<img src="thumbs/Bn47Tbo4jWY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Mn2o3R7X1fY.jpg" title="">
+										
+								<img src="thumbs/Mn2o3R7X1fY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:517;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/iKHwX5a9UUM.jpg" title="">
+										
+								<img src="thumbs/iKHwX5a9UUM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:560;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/sDIrXS6ndYo.jpg" title="">
+										
+								<img src="thumbs/sDIrXS6ndYo.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:400</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/OL6WZ2hxzbc.jpg" title="">
+										
+								<img src="thumbs/OL6WZ2hxzbc.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/hpUoUnqPHDk.jpg" title="">
+										
+								<img src="thumbs/hpUoUnqPHDk.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:414</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/9aQ3dUhjaqM.jpg" title="">
+										
+								<img src="thumbs/9aQ3dUhjaqM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:502;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/afpvWSaTby8.jpg" title="">
+										
+								<img src="thumbs/afpvWSaTby8.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:416;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/EtHwtJLVGno.jpg" title="">
+										
+								<img src="thumbs/EtHwtJLVGno.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/652yTJXYCno.jpg" title="">
+										
+								<img src="thumbs/652yTJXYCno.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:365;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/WVdMeKkLERM.jpg" title="">
+										
+								<img src="thumbs/WVdMeKkLERM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:513;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/O6HXidSRXn4.jpg" title="">
+										
+								<img src="thumbs/O6HXidSRXn4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:394</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/1Elam7-QZrc.jpg" title="">
+										
+								<img src="thumbs/1Elam7-QZrc.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:418</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/rB5PLfa-pLk.jpg" title="">
+										
+								<img src="thumbs/rB5PLfa-pLk.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:388</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/B4LDMGkxU5A.jpg" title="">
+										
+								<img src="thumbs/B4LDMGkxU5A.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:336;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/eCWKIyXzAHw.jpg" title="">
+										
+								<img src="thumbs/eCWKIyXzAHw.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/ZTNxur2RwuY.jpg" title="">
+										
+								<img src="thumbs/ZTNxur2RwuY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:528;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/F4QXy-uUqbA.jpg" title="">
+										
+								<img src="thumbs/F4QXy-uUqbA.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:444;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/YIXqBgzWiZg.jpg" title="">
+										
+								<img src="thumbs/YIXqBgzWiZg.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:427</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/78fnp5oF3n0.jpg" title="">
+										
+								<img src="thumbs/78fnp5oF3n0.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:345;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/jzo7NbEe3Xs.jpg" title="">
+										
+								<img src="thumbs/jzo7NbEe3Xs.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/vfLh1tzjZtg.jpg" title="">
+										
+								<img src="thumbs/vfLh1tzjZtg.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:343</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Iw5Bt7n3cN4.jpg" title="">
+										
+								<img src="thumbs/Iw5Bt7n3cN4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:411</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/x28KWWNr-D8.jpg" title="">
+										
+								<img src="thumbs/x28KWWNr-D8.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:436;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/OXaRaBh8UBg.jpg" title="">
+										
+								<img src="thumbs/OXaRaBh8UBg.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:546;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/TmjbrPrsaLI.jpg" title="">
+										
+								<img src="thumbs/TmjbrPrsaLI.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:346</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/brRSJBmWTOM.jpg" title="">
+										
+								<img src="thumbs/brRSJBmWTOM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:453</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/Qhf3nOL-VAw.jpg" title="">
+										
+								<img src="thumbs/Qhf3nOL-VAw.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/PPi--Ngy2jo.jpg" title="">
+										
+								<img src="thumbs/PPi--Ngy2jo.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:504;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/stLw8VV-UF4.jpg" title="">
+										
+								<img src="thumbs/stLw8VV-UF4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:523;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/zOzNm5nZIms.jpg" title="">
+										
+								<img src="thumbs/zOzNm5nZIms.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:456;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/LnpiUNtE1bA.jpg" title="">
+										
+								<img src="thumbs/LnpiUNtE1bA.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:283</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/CbHx9cc_g_o.jpg" title="">
+										
+								<img src="thumbs/CbHx9cc_g_o.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/yC7vSBYhlWk.jpg" title="">
+										
+								<img src="thumbs/yC7vSBYhlWk.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:318;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/99KVN8CgPSg.jpg" title="">
+										
+								<img src="thumbs/99KVN8CgPSg.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:365</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/spjdNQcTs9k.jpg" title="">
+										
+								<img src="thumbs/spjdNQcTs9k.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:360</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/89F-7DWRhdM.jpg" title="">
+										
+								<img src="thumbs/89F-7DWRhdM.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:560;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/yz0ift4GEto.jpg" title="">
+										
+								<img src="thumbs/yz0ift4GEto.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:384;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/WK1UpFhCjew.jpg" title="">
+										
+								<img src="thumbs/WK1UpFhCjew.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:340;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/erWTz2xwGsg.jpg" title="">
+										
+								<img src="thumbs/erWTz2xwGsg.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/nBb0_89gB10.jpg" title="">
+										
+								<img src="thumbs/nBb0_89gB10.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:559;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/AbIe-mEGG-s.jpg" title="">
+										
+								<img src="thumbs/AbIe-mEGG-s.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:375;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/x-d7ze0htLs.jpg" title="">
+										
+								<img src="thumbs/x-d7ze0htLs.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:551;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/sPGjDk9UXds.jpg" title="">
+										
+								<img src="thumbs/sPGjDk9UXds.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:480;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/5BfA820s9LY.jpg" title="">
+										
+								<img src="thumbs/5BfA820s9LY.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:373;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/XDSBrhEBESo.jpg" title="">
+										
+								<img src="thumbs/XDSBrhEBESo.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:640;;height:400</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/TZZCeotpZdU.jpg" title="">
+										
+								<img src="thumbs/TZZCeotpZdU.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:328;;height:480</span>
+						</li>
+						
+						<li class="">
+										
+
+							<a href="slides/U-KNusE2So4.jpg" title="">
+										
+								<img src="thumbs/U-KNusE2So4.jpg" alt="" title="" style="width: 90px; height: 90px;" />
+							</a>
+							<span>width:340;;height:480</span>
+						</li>
+						
+				</ul>
+				<div class="clear"></div>
+			</div>					
+			<img class="hide" id="right_arrow" src="../../../res/right.png" alt="Прокрутка вправо" title="Прокрутка вправо" />
+			
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div id="middle_container">
+			<div id="main_image"></div>
+			<div id="extras"></div>
+		</div>
+	<div class="clear"></div>	
+</div>
+<div class="clear"></div>
+		<div id="footer">
+				<p id="bottom_container">
+					Copyright: Nuark.Noir GDCP | <a href="http://jalbum.net/ru" target="_blank" title="jAlbum 13">jAlbum бесплатные веб-фотоальбомы</a> и <a href="http://jalbum.net/skins/skin/Galleria" title="Galleria">Galleria</a>.
+				</p>
+		</div>
+		
+	<div id="jalbumwidgetcontainer"></div>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+_jaSkin = "Galleria";
+_jaStyle = "Dark.css";
+_jaVersion = "13.0.8";
+_jaGeneratorType = "desktop";
+_jaLanguage = "ru";
+_jaPageType = "index";
+_jaRootPath = "../../..";
+_jaGuid = "1452248153900";
+var script = document.createElement("script");
+script.type = "text/javascript";
+script.src = "http://jalbum.net/widgetapi/load.js";
+document.getElementById("jalbumwidgetcontainer").appendChild(script);
+//--><!]]></script>
+
+</body>
+</html>
+

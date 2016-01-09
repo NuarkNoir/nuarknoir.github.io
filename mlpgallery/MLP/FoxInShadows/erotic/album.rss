@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>erotic</title>
+   	<link>../../..</link>
+        <generator>jAlbum 13</generator>
+   		<description></description>
+        <jalbum:absolutePath>http://ftp://192.168.43.3:1337/MLP/FoxInShadows/erotic/</jalbum:absolutePath>
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/erotic/NSFW/album.rss" title="NSFW" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/erotic/NSFW/thumbs/xslbdkZ4mCE.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+        
+    </channel>
+</rss>

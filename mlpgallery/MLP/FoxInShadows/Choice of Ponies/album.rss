@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Choice of Ponies</title>
+   	<link>../../..</link>
+        <generator>jAlbum 13</generator>
+   		<description></description>
+        <jalbum:absolutePath>http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/</jalbum:absolutePath>
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.1/album.rss" title="Volume.1" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.1/thumbs/XydRG9w0dL0.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.2/album.rss" title="Volume.2" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.2/thumbs/SPjAnGPL9KM.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.3/album.rss" title="Volume.3" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.3/thumbs/rfiBMtZzlRM.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.4/album.rss" title="Volume.4" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.4/thumbs/5HbuZLr5l1M.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.5/album.rss" title="Volume.5" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.5/thumbs/E9AxK8Snl6Q.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.6/album.rss" title="Volume.6" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.6/thumbs/mPz5uA5uJ_c.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.7(Season 5)/album.rss" title="Volume.7(Season 5)" thumbnail="http://ftp://192.168.43.3:1337/MLP/FoxInShadows/Choice of Ponies/Volume.7(Season 5)/thumbs/LuHzNIrZUok.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+        
+    </channel>
+</rss>

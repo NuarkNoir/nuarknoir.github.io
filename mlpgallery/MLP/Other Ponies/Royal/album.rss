@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Royal</title>
+   	<link>../../..</link>
+        <generator>jAlbum 13</generator>
+   		<description></description>
+        <jalbum:absolutePath>http://ftp://192.168.43.3:1337/MLP/Other Ponies/Royal/</jalbum:absolutePath>
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Royal/Celestia/album.rss" title="Celestia" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Royal/Celestia/thumbs/QZsAIJ9c5xA.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Royal/Luna/album.rss" title="Luna" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Royal/Luna/thumbs/1kFH5rVSeXY.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+        
+    </channel>
+</rss>

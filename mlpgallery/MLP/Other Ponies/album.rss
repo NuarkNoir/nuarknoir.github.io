@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Other Ponies</title>
+   	<link>../..</link>
+        <generator>jAlbum 13</generator>
+   		<description></description>
+        <jalbum:absolutePath>http://ftp://192.168.43.3:1337/MLP/Other Ponies/</jalbum:absolutePath>
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Cutie Mark Crusaders/album.rss" title="Cutie Mark Crusaders" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Cutie Mark Crusaders/thumbs/zT1tO2zTzgY.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Daring Do/album.rss" title="Daring Do" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Daring Do/thumbs/yabNNQaTGgk.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Derpy/album.rss" title="Derpy" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Derpy/thumbs/FXODQgGWHKE.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Octavia Melody/album.rss" title="Octavia Melody" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Octavia Melody/thumbs/Ppx2mv5-fNU.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Royal/album.rss" title="Royal" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Royal/Celestia/thumbs/QZsAIJ9c5xA.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+    	<jalbum:link rel="sub" href="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Vinyl Scratch/album.rss" title="Vinyl Scratch" thumbnail="http://ftp://192.168.43.3:1337/MLP/Other Ponies/Vinyl Scratch/thumbs/7eIy0LyAftY.jpg" thumbnailWidth="90" thumbnailHeight="90" />
+        
+    </channel>
+</rss>

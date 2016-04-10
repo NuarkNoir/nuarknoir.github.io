@@ -1,465 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Programms - GDCP</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-div#container
-{
-   width: 800px;
-   position: relative;
-   margin: 0 auto 0 auto;
-   text-align: left;
-}
-body
-{
-   background-color: #FFFFFF;
-   color: #000000;
-   font-family: Arial;
-   font-weight: normal;
-   font-size: 13px;
-   line-height: 1.1875;
-   margin: 0;
-   text-align: center;
-}
-a
-{
-   color: #0000FF;
-   text-decoration: underline;
-}
-a:visited
-{
-   color: #800080;
-}
-a:active
-{
-   color: #FF0000;
-}
-a:hover
-{
-   color: #0000FF;
-   text-decoration: underline;
-}
-#Layer1
-{
-   background-color: #232B2B;
-}
-#wb_Text6 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text6 div
-{
-   text-align: left;
-}
-#Layer2
-{
-   background-color: #DC3D24;
-}
-#Layer3
-{
-   background-color: #DC3D24;
-}
-#Layer4
-{
-   background-color: #232B2B;
-}
-#wb_Text11 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: center;
-}
-#wb_Text11 div
-{
-   text-align: center;
-}
-#wb_Text8 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text8 div
-{
-   text-align: left;
-}
-#Table1
-{
-   border: 2px #C0C0C0 solid;
-   background-color: transparent;
-   border-spacing: 1px;
-}
-#Table1 td
-{
-   padding: 0px 0px 0px 0px;
-}
-#Table1 td div
-{
-   white-space: nowrap;
-}
-#Table1 .cell0
-{
-   background-color: transparent;
-   border: 1px #C0C0C0 solid;
-   text-align: center;
-   vertical-align: top;
-   width: 41px;
-   height: 34px;
-}
-#Table1 .cell1
-{
-   background-color: transparent;
-   border: 1px #C0C0C0 solid;
-   text-align: center;
-   vertical-align: top;
-   width: 272px;
-   height: 34px;
-}
-#Table1 .cell2
-{
-   background-color: transparent;
-   border: 1px #C0C0C0 solid;
-   text-align: center;
-   vertical-align: top;
-   width: 156px;
-   height: 34px;
-}
-#Table1 .cell3
-{
-   background-color: transparent;
-   border: 1px #C0C0C0 solid;
-   text-align: center;
-   vertical-align: top;
-   height: 34px;
-}
-#Table1 .cell4
-{
-   background-color: transparent;
-   border: 1px #C0C0C0 solid;
-   text-align: center;
-   vertical-align: top;
-   width: 41px;
-   height: 19px;
-}
-#Table1 .cell5
-{
-   background-color: transparent;
-   border: 1px #C0C0C0 solid;
-   text-align: left;
-   vertical-align: top;
-   width: 272px;
-   height: 19px;
-}
-#Table1 .cell6
-{
-   background-color: transparent;
-   border: 1px #C0C0C0 solid;
-   text-align: center;
-   vertical-align: top;
-   width: 156px;
-   height: 19px;
-}
-#Table1 .cell7
-{
-   background-color: transparent;
-   border: 1px #C0C0C0 solid;
-   text-align: center;
-   vertical-align: top;
-   height: 19px;
-}
-#Layer2_Container
-{
-   width: 800px;
-   position: relative;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: left;
-}
-#Layer1
-{
-   position: absolute;
-   text-align: center;
-   left: 0px;
-   top: 0px;
-   width: 100%;
-   height: 80px;
-   z-index: 5;
-}
-#Layer2
-{
-   position: absolute;
-   text-align: center;
-   left: 0px;
-   top: 80px;
-   width: 100%;
-   height: 20px;
-   z-index: 6;
-}
-#Table1
-{
-   position: absolute;
-   left: 0px;
-   top: 100px;
-   width: 801px;
-   height: 64px;
-   z-index: 4;
-}
-#Layer4_Container
-{
-   width: 800px;
-   position: relative;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: left;
-}
-#Layer3
-{
-   position: absolute;
-   text-align: center;
-   left: 0px;
-   top: 780px;
-   width: 100%;
-   height: 20px;
-   z-index: 7;
-}
-#wb_Text6
-{
-   position: absolute;
-   left: 31px;
-   top: 9px;
-   width: 472px;
-   height: 61px;
-   z-index: 2;
-   text-align: left;
-}
-#Layer1_Container
-{
-   width: 800px;
-   position: relative;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: left;
-}
-#Layer4
-{
-   position: absolute;
-   text-align: center;
-   left: 0px;
-   top: 800px;
-   width: 100%;
-   height: 100px;
-   z-index: 8;
-}
-#wb_Text8
-{
-   position: absolute;
-   left: 17px;
-   top: 10px;
-   width: 472px;
-   height: 61px;
-   visibility: hidden;
-   z-index: 1;
-   text-align: left;
-}
-#wb_Text11
-{
-   position: absolute;
-   left: 7px;
-   top: 42px;
-   width: 780px;
-   height: 16px;
-   text-align: center;
-   z-index: 3;
-}
-#Layer3_Container
-{
-   width: 800px;
-   position: relative;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: left;
-}
-@media only screen and (max-width: 320px)
-{
-div#container
-{
-   width: 320px;
-}
-#Layer1
-{
-   left: 0px;
-   top: 0px;
-   height: 80px;
-   visibility: visible;
-   display: inline;
-}
-#Layer1
-{
-   width: 100%;
-}
-#Layer1_Container
-{
-   width: 320px;
-}
-#BuildWith1
-{
-   left: 241px;
-   top: 10px;
-   width: 62px;
-   height: 31px;
-   visibility: visible;
-   display: inline;
-}
-#wb_Text6
-{
-   left: 2px;
-   top: 2px;
-   width: 308px;
-   height: 122px;
-   visibility: hidden;
-   display: none;
-}
-#Layer2
-{
-   left: 0px;
-   top: 80px;
-   height: 20px;
-   visibility: visible;
-   display: inline;
-}
-#Layer2
-{
-   width: 100%;
-}
-#Layer2_Container
-{
-   width: 320px;
-}
-#Layer3
-{
-   left: 0px;
-   top: 1081px;
-   height: 20px;
-   visibility: visible;
-   display: inline;
-}
-#Layer3
-{
-   width: 100%;
-}
-#Layer3_Container
-{
-   width: 320px;
-}
-#Layer4
-{
-   left: 0px;
-   top: 1101px;
-   height: 58px;
-   visibility: visible;
-   display: inline;
-}
-#Layer4
-{
-   width: 100%;
-}
-#Layer4_Container
-{
-   width: 320px;
-}
-#wb_Text11
-{
-   left: 7px;
-   top: 12px;
-   width: 302px;
-   height: 32px;
-   visibility: visible;
-   display: inline;
-}
-#wb_Text8
-{
-   left: 11px;
-   top: 9px;
-   width: 246px;
-   height: 43px;
-   visibility: visible;
-   display: inline;
-}
-#Table1
-{
-   left: 183px;
-   top: 270px;
-   visibility: visible;
-   display: table;
-}
-}
-</style>
+   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+   <meta name="keywords" content="nuark.noir, gdcp, youtube" />
+   <meta name="description" content="Оффишиал пэйдж оф Нурк.Ноир GDCP Тим. Заходи к нам!" />
+   <meta charset="UTF-8">
+
+   <title>Проекты - Nuark.Noir | Команда GDCP</title>
+
+   <link rel="shortcut icon" type="img/x-icon" href="img/logomin.png">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script src="jquery.jscroll.min.js" type="text/javascript"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+   <script src="jquery.scrollTo-1.4.2/jquery.scrollTo-min.js"></script>
 </head>
 <body>
-<div id="container">
-<table id="Table1">
-<tr>
-<td class="cell0"><span style="color:#000000;font-family:Arial;font-size:24px;line-height:29px;"><strong> </strong></span><span style="color:#000000;font-family:'Segoe UI Symbol';font-size:24px;line-height:29px;"><strong>№</strong></span></td>
-<td class="cell1"><span style="color:#000000;font-family:Arial;font-size:24px;line-height:29px;"><strong> Название</strong></span></td>
-<td class="cell2"><span style="color:#000000;font-family:Arial;font-size:24px;line-height:29px;"><strong> Вес</strong></span></td>
-<td class="cell2"><span style="color:#000000;font-family:Arial;font-size:24px;line-height:29px;"><strong> Дата</strong></span></td>
-<td class="cell3"><span style="color:#000000;font-family:Arial;font-size:24px;line-height:29px;"><strong> Скачать</strong></span></td>
-</tr>
-<tr>
-<td class="cell4"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> 1</strong></span></td>
-<td class="cell5"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> InnertialMouse</strong></span></td>
-<td class="cell6"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> 108 КБ</strong></span></td>
-<td class="cell6"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong>17.08.20015</strong></span></td>
-<td class="cell7"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong><a href="http://nuarknoir.byethost18.com/Release/InnertialMouse/InertiaMouse.tar.bz2" title="#">Скачать...</a></strong></span></td>
-</tr>
-<tr>
-<td class="cell4"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> 2</strong></span></td>
-<td class="cell5"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> DSKSwitch</strong></span></td>
-<td class="cell6"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> 128 КБ</strong></span></td>
-<td class="cell6"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong>17.08.2015</strong></span></td>
-<td class="cell7"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong><a href="http://nuarknoir.byethost18.com/Release/DesktopSwitch/DSKSwitch.tar.bz2" title="#">Скачать...</a></strong></span></td>
-</tr>
-<tr>
-<td class="cell4"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> 3</strong></span></td>
-<td class="cell5"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> WebConverter</strong></span></td>
-<td class="cell6"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong> 17,5 МБ</strong></span></td>
-<td class="cell6"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong>21.02.2016</strong></span></td>
-<td class="cell7"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong><a href="http://nuarknoir.byethost18.com/Release/WebConverter/WebConverter.tar.bz2" title="#">Скачать...</a></strong></span></td>
-</tr>
-</table>
-</div>
-<div id="Layer1">
-<div id="Layer1_Container">
+   <header class="header">
+      <div class="middle">
+            <div class="topmenu">
+               <button onclick="location.href = 'index.html'" type="submit" class="button_menu">Главная</button>
+            </div>
+            <img src="img/logo.png" alt="logo">
+      </div>
+   </header>
 
-<div id="wb_Text8">
-<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:35px;"><strong>Nuark.Noir - GDCP</strong></span></div>
-<div id="wb_Text6">
-<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:48px;"><strong>Nuark.Noir GDCP</strong></span></div>
-</div>
-</div>
-<div id="Layer2">
-<div id="Layer2_Container">
-</div>
-</div>
-<div id="Layer3">
-<div id="Layer3_Container">
-</div>
-</div>
-<div id="Layer4">
-<div id="Layer4_Container">
-<div id="wb_Text11">
-<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:11px;">Copyright © 2014 by &quot;Nuark.Noir&quot;&nbsp; ·&nbsp; All Rights reserved&nbsp; ·&nbsp; E-Mail: mrcluster@yandex.ru</span></div>
-</div>
-</div>
+   <div class="content">
+      <div class="middle">
+         <div class="masonry">
+            <div class="item">
+               <img src="http://placehold.it/350x200">
+                  <br><a href="projects.html">Проекты</a>
+            </div>
+            <div class="item">
+               <img src="http://placehold.it/350x200">
+                  <br><a href="aboutUs.html">О Нас</a>
+            </div>
+            <div class="item">
+               <img src="http://placehold.it/350x200">
+                  <br><a href="contacts.html">Контакты</a>
+            </div>         
+         </div>
+      </div>
+   </div>
+
+   <footer class="footer">
+      <div class="middle">
+         <span style= color:#FFFFFF;>
+            ©GDCP 2014-2016 · All Rights reserved · E-Mail: <a href="mailto:mrcluster@ya.ru">mrcluster@ya.ru</a>
+         </span>
+         <br>
+         <span style= color:#FFFFFF;>
+            Design and Development by Nuark.Noir
+         </span>
+         <br>
+         <a href="#" class="up">Go UP</a>
+      </div>
+   </footer>
 </body>
 </html>

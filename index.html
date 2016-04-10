@@ -15,61 +15,17 @@
 	<script src="jquery.jscroll.min.js" type="text/javascript"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script src="jquery.scrollTo-1.4.2/jquery.scrollTo-min.js"></script>
-<script>  
-    function showContent(link) {  
-  
-        var cont = document.getElementById('contentBody');  
-        var loading = document.getElementById('loading');  
-  
-        cont.innerHTML = loading.innerHTML;  
-  
-        var http = createRequestObject();  
-        if( http )   
-        {  
-            http.open('get', link);  
-            http.onreadystatechange = function ()   
-            {  
-                if(http.readyState == 4)   
-                {  
-                    cont.innerHTML = http.responseText;  
-                }  
-            }  
-            http.send(null);      
-        }  
-        else   
-        {  
-            document.location = link;  
-        }  
-    }  
-  
-    // создание ajax объекта  
-    function createRequestObject()   
-    {  
-        try { return new XMLHttpRequest() }  
-        catch(e)   
-        {  
-            try { return new ActiveXObject('Msxml2.XMLHTTP') }  
-            catch(e)   
-            {  
-                try { return new ActiveXObject('Microsoft.XMLHTTP') }  
-                catch(e) { return null; }  
-            }  
-        }  
-    }  
-</script>
 </head>
 <body>
 	<header class="header">
 		<div class="middle">
-			<header>
 				<div class="topmenu">
-					<button onclick="showContent('main.html')" type="submit" class="button_menu">Главная</button>
-					<button onclick="showContent('projects.html')" type="submit" class="button_menu">Проекты</button>
-					<button onclick="showContent('aboutUs.html')" type="submit" class="button_menu">О GDCP</button>
-					<button onclick="showContent('contacts.html')" type="submit" class="button_menu">Контакты</button>
+					<button onclick="location.href = 'index.html'" type="submit" class="button_menu">Главная</button>
+					<button onclick="location.href = 'projects.html'" type="submit" class="button_menu">Проекты</button>
+					<button onclick="location.href = 'aboutUs.html'" type="submit" class="button_menu">О GDCP</button>
+					<button onclick="location.href = 'contacts.html'" type="submit" class="button_menu">Контакты</button>
 				</div>
-				<img src="img/logo.png">
-			</header>
+				<img src="img/logo.png" alt="logo">
 		</div>
 	</header>
 
@@ -80,16 +36,20 @@
 	</div>
 
 	<div class="content">
-
+		<div class="middle">		
+			
+		</div>
 	</div>
-
-	<aside class="left-sidebar">
-		
-	</aside>
 
 	<footer class="footer">
 		<div class="middle">
-			<span style=color:#FFFFFF;font-family:'Trebuchet MS';font-size:11px;>Copyright © 2014 by "Nuark.Noir"  ·  All Rights reserved  ·  E-Mail: <a href="mailto:mrcluster@ya.ru">mrcluster@ya.ru</a></span>
+			<span style= color:#FFFFFF;>
+				©GDCP 2014-2016 · All Rights reserved · E-Mail: <a href="mailto:mrcluster@ya.ru">mrcluster@ya.ru</a>
+			</span>
+			<br>
+			<span style= color:#FFFFFF;>
+				Design and Development by Nuark.Noir
+			</span>
 			<br>
 			<a href="#" class="up">Go UP</a>
 		</div>

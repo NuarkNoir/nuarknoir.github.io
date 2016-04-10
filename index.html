@@ -1,716 +1,98 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Nuark.Noir - GDCP</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style type="text/css">
-div#container
-{
-   width: 800px;
-   position: relative;
-   margin: 0 auto 0 auto;
-   text-align: left;
-}
-body
-{
-   background-color: #FFFFFF;
-   color: #000000;
-   font-family: Arial;
-   font-weight: normal;
-   font-size: 13px;
-   line-height: 1.1875;
-   margin: 0;
-   text-align: center;
-}
-a
-{
-   color: #0000FF;
-   text-decoration: underline;
-}
-a:visited
-{
-   color: #800080;
-}
-a:active
-{
-   color: #FF0000;
-}
-a:hover
-{
-   color: #0000FF;
-   text-decoration: underline;
-}
-#Layer1
-{
-   background-color: #232B2B;
-}
-#Shape1
-{
-   width: 236px;
-   height: 546px;
-   background-color: #232B2B;
-   border: 0px #000000 solid;
-}
-#wb_Text2 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text2 div
-{
-   text-align: left;
-   white-space: nowrap;
-}
-#wb_Text3 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: justify;
-}
-#wb_Text3 div
-{
-   text-align: justify;
-}
-#Shape3
-{
-   width: 500px;
-   height: 2px;
-   background-color: #C0C0C0;
-   border: 0px #000000 solid;
-}
-#wb_Text6 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text6 div
-{
-   text-align: left;
-}
-#Layer2
-{
-   background-color: #DC3D24;
-}
-#Shape2
-{
-   width: 238px;
-   height: 20px;
-   background-color: #DC3D24;
-   border: 0px #000000 solid;
-}
-#wb_Text5 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text5 div
-{
-   text-align: left;
-   white-space: nowrap;
-}
-#wb_Text10 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text10 div
-{
-   text-align: left;
-   white-space: nowrap;
-}
-#Layer3
-{
-   background-color: #DC3D24;
-}
-#Layer4
-{
-   background-color: #232B2B;
-}
-#wb_Text11 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: center;
-}
-#wb_Text11 div
-{
-   text-align: center;
-}
-#wb_Text8 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text8 div
-{
-   text-align: left;
-}
-#wb_Text9 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text9 div
-{
-   text-align: left;
-   white-space: nowrap;
-}
-#TabMenu1
-{
-   text-align: left;
-   float: left;
-   margin: 0;
-   width: 100%;
-   font-family: Arial;
-   font-weight: normal;
-   font-size: 13px;
-   border-bottom: 1px solid #C0C0C0;
-   list-style-type: none;
-   padding: 15px 0px 4px 10px;
-   overflow: hidden;
-}
-#TabMenu1 li
-{
-   float: left;
-}
-#TabMenu1 li a.active, #TabMenu1 li a:hover.active
-{
-   background-color: #FFFFFF;
-   color: #666666;
-   position: relative;
-   font-weight: normal;
-   text-decoration: none;
-   z-index: 2;
-}
-#TabMenu1 li a
-{
-   padding: 5px 14px 8px 14px;
-   border: 1px solid #C0C0C0;
-   border-top-left-radius: 5px;
-   border-top-right-radius: 5px;
-   background-color: #EEEEEE;
-   color: #666666;
-   margin-right: 3px;
-   text-decoration: none;
-   border-bottom: none;
-   position: relative;
-   top: 0;
-   -webkit-transition: 200ms all linear;
-   -moz-transition: 200ms all linear;
-   -ms-transition: 200ms all linear;
-   transition: 200ms all linear;
-}
-#TabMenu1 li a:hover
-{
-   background: #C0C0C0;
-   color: #666666;
-   font-weight: normal;
-   text-decoration: none;
-   top: -4px;
-}
-#wb_Text1 
-{
-   background-color: transparent;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: center;
-}
-#wb_Text1 div
-{
-   text-align: center;
-}
-#Layer2_Container
-{
-   width: 800px;
-   position: relative;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: left;
-}
-#wb_Text1
-{
-   position: absolute;
-   left: 300px;
-   top: 214px;
-   width: 500px;
-   height: 23px;
-   text-align: center;
-   z-index: 13;
-}
-#wb_TabMenu1
-{
-   position: absolute;
-   left: 300px;
-   top: 169px;
-   width: 498px;
-   height: 45px;
-   z-index: 12;
-   overflow: hidden;
-}
-#wb_Text2
-{
-   position: absolute;
-   left: 45px;
-   top: 169px;
-   width: 205px;
-   height: 54px;
-   z-index: 5;
-   text-align: left;
-}
-#wb_Text3
-{
-   position: absolute;
-   left: 300px;
-   top: 136px;
-   width: 330px;
-   height: 29px;
-   text-align: justify;
-   z-index: 6;
-}
-#Layer1
-{
-   position: absolute;
-   text-align: center;
-   left: 0px;
-   top: 0px;
-   width: 100%;
-   height: 80px;
-   z-index: 14;
-}
-#Layer2
-{
-   position: absolute;
-   text-align: center;
-   left: 0px;
-   top: 80px;
-   width: 100%;
-   height: 20px;
-   z-index: 15;
-}
-#wb_Text5
-{
-   position: absolute;
-   left: 45px;
-   top: 223px;
-   width: 205px;
-   height: 90px;
-   z-index: 9;
-   text-align: left;
-}
-#Layer4_Container
-{
-   width: 800px;
-   position: relative;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: left;
-}
-#Layer3
-{
-   position: absolute;
-   text-align: center;
-   left: 0px;
-   top: 780px;
-   width: 100%;
-   height: 20px;
-   z-index: 16;
-}
-#wb_Text6
-{
-   position: absolute;
-   left: 31px;
-   top: 9px;
-   width: 472px;
-   height: 61px;
-   z-index: 2;
-   text-align: left;
-}
-#Layer1_Container
-{
-   width: 800px;
-   position: relative;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: left;
-}
-#Layer4
-{
-   position: absolute;
-   text-align: center;
-   left: 0px;
-   top: 800px;
-   width: 100%;
-   height: 100px;
-   z-index: 17;
-}
-#wb_Text8
-{
-   position: absolute;
-   left: 17px;
-   top: 10px;
-   width: 472px;
-   height: 61px;
-   visibility: hidden;
-   z-index: 1;
-   text-align: left;
-}
-#wb_Text10
-{
-   position: absolute;
-   left: 45px;
-   top: 313px;
-   width: 205px;
-   height: 162px;
-   z-index: 10;
-   text-align: left;
-}
-#wb_Text11
-{
-   position: absolute;
-   left: 7px;
-   top: 42px;
-   width: 780px;
-   height: 16px;
-   text-align: center;
-   z-index: 3;
-}
-#wb_Text9
-{
-   position: absolute;
-   left: 45px;
-   top: 475px;
-   width: 205px;
-   height: 216px;
-   z-index: 11;
-   text-align: left;
-}
-#Layer3_Container
-{
-   width: 800px;
-   position: relative;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: left;
-}
-#wb_Shape1
-{
-   position: absolute;
-   left: 31px;
-   top: 157px;
-   width: 236px;
-   height: 546px;
-   z-index: 4;
-}
-#wb_Shape2
-{
-   position: absolute;
-   left: 30px;
-   top: 137px;
-   width: 238px;
-   height: 20px;
-   z-index: 8;
-}
-#wb_Shape3
-{
-   position: absolute;
-   left: 300px;
-   top: 169px;
-   width: 500px;
-   height: 2px;
-   z-index: 7;
-}
-@media only screen and (max-width: 320px)
-{
-div#container
-{
-   width: 320px;
-}
-#Layer1
-{
-   left: 0px;
-   top: 0px;
-   height: 80px;
-   visibility: visible;
-   display: inline;
-}
-#Layer1
-{
-   width: 100%;
-}
-#Layer1_Container
-{
-   width: 320px;
-}
-#wb_Shape1
-{
-   left: 30px;
-   top: 157px;
-   width: 236px;
-   height: 595px;
-   visibility: hidden;
-   display: none;
-}
-#Shape1
-{
-   width: 236px;
-   height: 595px;
-}
-#wb_Text2
-{
-   left: 45px;
-   top: 169px;
-   visibility: hidden;
-   display: none;
-}
-#wb_Text3
-{
-   left: 13px;
-   top: 154px;
-   width: 288px;
-   height: 281px;
-   visibility: visible;
-   display: inline;
-}
-#wb_Shape3
-{
-   left: 12px;
-   top: 190px;
-   width: 292px;
-   height: 2px;
-   visibility: visible;
-   display: inline;
-}
-#Shape3
-{
-   width: 292px;
-   height: 2px;
-}
-#BuildWith1
-{
-   left: 241px;
-   top: 10px;
-   width: 62px;
-   height: 31px;
-   visibility: visible;
-   display: inline;
-}
-#wb_Text6
-{
-   left: 2px;
-   top: 2px;
-   width: 308px;
-   height: 122px;
-   visibility: hidden;
-   display: none;
-}
-#Layer2
-{
-   left: 0px;
-   top: 80px;
-   height: 20px;
-   visibility: visible;
-   display: inline;
-}
-#Layer2
-{
-   width: 100%;
-}
-#Layer2_Container
-{
-   width: 320px;
-}
-#wb_Shape2
-{
-   left: 30px;
-   top: 137px;
-   width: 236px;
-   height: 20px;
-   visibility: hidden;
-   display: none;
-}
-#Shape2
-{
-   width: 236px;
-   height: 20px;
-}
-#wb_Text5
-{
-   left: 45px;
-   top: 361px;
-   visibility: hidden;
-   display: none;
-}
-#wb_Text10
-{
-   left: 45px;
-   top: 562px;
-   visibility: hidden;
-   display: none;
-}
-#Layer3
-{
-   left: 0px;
-   top: 1081px;
-   height: 20px;
-   visibility: visible;
-   display: inline;
-}
-#Layer3
-{
-   width: 100%;
-}
-#Layer3_Container
-{
-   width: 320px;
-}
-#Layer4
-{
-   left: 0px;
-   top: 1101px;
-   height: 58px;
-   visibility: visible;
-   display: inline;
-}
-#Layer4
-{
-   width: 100%;
-}
-#Layer4_Container
-{
-   width: 320px;
-}
-#wb_Text11
-{
-   left: 7px;
-   top: 12px;
-   width: 302px;
-   height: 32px;
-   visibility: visible;
-   display: inline;
-}
-#wb_Text8
-{
-   left: 11px;
-   top: 9px;
-   width: 246px;
-   height: 43px;
-   visibility: visible;
-   display: inline;
-}
-#wb_Text9
-{
-   left: 45px;
-   top: 475px;
-   visibility: visible;
-   display: inline;
-}
-}
-</style>
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<meta name="keywords" content="nuark.noir, gdcp, youtube" />
+	<meta name="description" content="Оффишиал пэйдж оф Нурк.Ноир GDCP Тим. Заходи к нам!" />
+	<meta charset="UTF-8">
+
+	<title>Nuark.Noir | Команда GDCP</title>
+
+	<link rel="shortcut icon" type="img/x-icon" href="img/logomin.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="jquery.jscroll.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="jquery.scrollTo-1.4.2/jquery.scrollTo-min.js"></script>
+<script>  
+    function showContent(link) {  
+  
+        var cont = document.getElementById('contentBody');  
+        var loading = document.getElementById('loading');  
+  
+        cont.innerHTML = loading.innerHTML;  
+  
+        var http = createRequestObject();  
+        if( http )   
+        {  
+            http.open('get', link);  
+            http.onreadystatechange = function ()   
+            {  
+                if(http.readyState == 4)   
+                {  
+                    cont.innerHTML = http.responseText;  
+                }  
+            }  
+            http.send(null);      
+        }  
+        else   
+        {  
+            document.location = link;  
+        }  
+    }  
+  
+    // создание ajax объекта  
+    function createRequestObject()   
+    {  
+        try { return new XMLHttpRequest() }  
+        catch(e)   
+        {  
+            try { return new ActiveXObject('Msxml2.XMLHTTP') }  
+            catch(e)   
+            {  
+                try { return new ActiveXObject('Microsoft.XMLHTTP') }  
+                catch(e) { return null; }  
+            }  
+        }  
+    }  
+</script>
 </head>
 <body>
-<div id="container">
-<div id="wb_Shape1">
-<div id="Shape1"></div></div>
-<div id="wb_Text2">
-<div style="position:absolute;left:0px;top:0px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:13px;"><strong>Привет</strong></span></div>
-<div style="position:absolute;left:0px;top:18px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">Приветствую Вас в моём </span></div>
-<div style="position:absolute;left:0px;top:36px;width:205px;height:16px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">чистилище.</span></div>
-</div>
-<div id="wb_Text3">
-<span style="color:#000000;font-family:'Trebuchet MS';font-size:24px;">Привет</span></div>
-<div id="wb_Shape3">
-<div id="Shape3"></div></div>
-<div id="wb_Shape2">
-<div id="Shape2"></div></div>
-<div id="wb_Text5">
-<div style="position:absolute;left:0px;top:0px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:13px;"><strong>Чем я занимаюсь:</strong></span></div>
-<div style="position:absolute;left:0px;top:18px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">Программирую, рисую, пишу </span></div>
-<div style="position:absolute;left:0px;top:36px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">музыку, работаю по фрилансу - в </span></div>
-<div style="position:absolute;left:0px;top:54px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">общем, делаю то, что нравится </span></div>
-<div style="position:absolute;left:0px;top:72px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">людям.</span></div>
-</div>
-<div id="wb_Text10">
-<div style="position:absolute;left:0px;top:0px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:13px;"><strong>Чем я могу помочь вам?</strong></span></div>
-<div style="position:absolute;left:0px;top:18px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">Вы можете попросить меня </span></div>
-<div style="position:absolute;left:0px;top:36px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">нарисовать вам что-нибудь, скачать </span></div>
-<div style="position:absolute;left:0px;top:54px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">no-copyright трэки для своих </span></div>
-<div style="position:absolute;left:0px;top:72px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">проектов(YT-каналы, игры и пр.). </span></div>
-<div style="position:absolute;left:0px;top:90px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">Могу написать для Вас программу. </span></div>
-<div style="position:absolute;left:0px;top:108px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">И всё это по очень низким ценам, </span></div>
-<div style="position:absolute;left:0px;top:126px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">хотя если хорошо попросить - то и </span></div>
-<div style="position:absolute;left:0px;top:144px;width:205px;height:16px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">бесплатно.</span></div>
-</div>
-<div id="wb_Text9">
-<div style="position:absolute;left:0px;top:0px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:13px;"><strong>Чем Вы можете помочь мне?</strong></span></div>
-<div style="position:absolute;left:0px;top:18px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">Пожертвовать деньги на развитие </span></div>
-<div style="position:absolute;left:0px;top:36px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">проекта:</span></div>
-<div style="position:absolute;left:0px;top:54px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp; R-кошелёк&nbsp; R346825663857</span></div>
-<div style="position:absolute;left:0px;top:72px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp; Z-кошелёк&nbsp; Z613935365026</span></div>
-<div style="position:absolute;left:0px;top:90px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp; G-кошелёк&nbsp; G417264399574</span></div>
-<div style="position:absolute;left:0px;top:108px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">Подписаться на мой YouTube </span></div>
-<div style="position:absolute;left:0px;top:126px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">канал:</span></div>
-<div style="position:absolute;left:0px;top:144px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#DC3D24;font-family:'Trebuchet MS';font-size:12px;"><a href="https://www.youtube.com/channel/UCrQhLIkDCkZ9uCsLYfMU_nw" target="_blank">*Клик*</a></span></div>
-<div style="position:absolute;left:0px;top:162px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">Скинуть мне свой хлам из </span></div>
-<div style="position:absolute;left:0px;top:180px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">инвентаря Стим:</span></div>
-<div style="position:absolute;left:0px;top:198px;width:205px;height:18px;"><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://steamcommunity.com/tradeoffer/new/?partner=248671948&token=74z3Occs">*Клин*</a></span></div>
-</div>
-<div id="wb_TabMenu1">
-<ul id="TabMenu1">
-<li><a href="http://nuarknoir.github.io/mlpgallery " title="&#1043;&#1072;&#1083;&#1077;&#1088;&#1077;&#1103; &#1050;&#1072;&#1088;&#1090;&#1080;&#1085;&#1086;&#1082;" target="_blank">Галерея Картинок</a></li>
-<li><a href="http://nuarknoir.github.io/programms.html" title="&#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1099;">Программы</a></li>
-<li><a href="http://nuark.deviantart.com/" title="&#1056;&#1080;&#1089;&#1091;&#1085;&#1082;&#1080;" target="_blank">Рисунки</a></li>
-<li><a href="https://soundcloud.com/nuark-noir-ngc" title="&#1052;&#1091;&#1079;&#1099;&#1082;&#1072;" target="_blank">Музыка</a></li>
-<li><a href="http://nuarknoir.github.io/sr34.html" title="NSFW" target="_blank">NSFW</a></li>
-</ul>
-</div>
-<div id="wb_Text1">
-<span style="color:#000000;font-family:'Trebuchet MS';font-size:17px;">Сверху ссылочки на мои проекты. Зайдите, посмотрите.</span></div>
-</div>
-<div id="Layer1">
-<div id="Layer1_Container">
+	<header class="header">
+		<div class="middle">
+			<header>
+				<div class="topmenu">
+					<button onclick="showContent('main.html')" type="submit" class="button_menu">Главная</button>
+					<button onclick="showContent('projects.html')" type="submit" class="button_menu">Проекты</button>
+					<button onclick="showContent('aboutUs.html')" type="submit" class="button_menu">О GDCP</button>
+					<button onclick="showContent('contacts.html')" type="submit" class="button_menu">Контакты</button>
+				</div>
+				<img src="img/logo.png">
+			</header>
+		</div>
+	</header>
 
-<div id="wb_Text8">
-<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:35px;"><strong>Nuark.Noir - GDCP</strong></span></div>
-<div id="wb_Text6">
-<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:48px;"><strong>Nuark.Noir GDCP</strong></span></div>
-</div>
-</div>
-<div id="Layer2">
-<div id="Layer2_Container">
-</div>
-</div>
-<div id="Layer3">
-<div id="Layer3_Container">
-</div>
-</div>
-<div id="Layer4">
-<div id="Layer4_Container">
-<div id="wb_Text11">
-<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:11px;">Copyright © 2014 by &quot;Nuark.Noir&quot;&nbsp; ·&nbsp; All Rights reserved&nbsp; ·&nbsp; E-Mail: mrcluster@yandex.ru</span></div>
-</div>
-</div>
+	<div class="menu">
+		<div class="middle">
+			
+		</div>
+	</div>
+
+	<div class="content">
+
+	</div>
+
+	<aside class="left-sidebar">
+		
+	</aside>
+
+	<footer class="footer">
+		<div class="middle">
+			<span style=color:#FFFFFF;font-family:'Trebuchet MS';font-size:11px;>Copyright © 2014 by "Nuark.Noir"  ·  All Rights reserved  ·  E-Mail: <a href="mailto:mrcluster@ya.ru">mrcluster@ya.ru</a></span>
+			<br>
+			<a href="#" class="up">Go UP</a>
+		</div>
+	</footer>
 </body>
 </html>

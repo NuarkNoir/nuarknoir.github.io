@@ -14,8 +14,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 
 .middle{
 	width: 1000px;
-	margin: 0 auto;
-	position: relative;
+	margin: auto auto;
+	position: static;
+	height: inherit;
 }
 
 .container {
@@ -25,7 +26,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 .content {
-	padding: 0 0 0 270px;
+	padding: 0 0 0 50px;
 
 }
 

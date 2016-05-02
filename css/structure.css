@@ -1,0 +1,55 @@
+/*  Структура   */
+p{
+font-size: 14pt;
+}
+
+.left-side-box{
+width: 140px;
+}
+
+.middle{
+	width: device-width;
+	margin: 300px 300px;
+	position: absolute;
+}
+
+.middle-menu{
+	width: device-width;
+	margin: 0 300px;
+	position: absolute;
+}
+
+.content {
+padding: 0 0 0 0px;
+}
+
+.header{
+background: #101010;
+}
+
+/*  Шапка   */
+.topmenu{
+float: right;
+padding: 17.5px 17.5px 17.5px 17.5px;
+}
+
+.button_menu {
+display: inline-block;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+padding: 10px 20px;
+border: none;
+color: rgba(255,255,255,0.9);
+background: #404040;
+width: 140px;
+}
+
+/*  Подвал  */
+.footer {
+width: device-width;
+height: 66px;
+background: #101010;
+position: relative;
+text-align: center;
+}

@@ -1,17 +1,76 @@
-/*  Инициализация   */
-body{
-background: #202020;
-margin: 0;
-padding: 0;
+﻿html {
+	height: 100%;
 }
 
-/*  Цвета ссылок    */
+body{
+	background: #202020;
+	margin: 0;
+	padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+.middle{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.content {
+	padding: 0 0 0 270px;
+
+}
+
+.header{
+	background: #101010;
+}
+
+.footer{
+	height: 100px;
+	background: #101010;
+}
+
+.topmenu{
+	float: right;
+}
+
+.button_menu {
+	display: inline-block;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	padding: 10px 20px;
+	border: none;
+	color: rgba(255,255,255,0.9);
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	background: #404040;
+	width: 70px;
+}
+
+.footer {
+	margin-bottom:30px
+	width: 100%;
+	height: 66px;
+	background: #101010;
+	position: relative;
+	text-align: center;
+}
+
 A {
-color: gold;
+	color: gold;
 }
 A:visited {
-color: gold;
+	color: gold;
 }
 A:active {
-color: gold;
+	color: gold;
 }

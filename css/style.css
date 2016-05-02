@@ -1,77 +1,69 @@
 ﻿html {
-	height: 100%;
+height:100%
 }
 
-body{
-	background: #202020;
-	margin: 0;
-	padding: 0;
+body {
+background:#202020;
+margin:0;
+padding:0
+width:device-width
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-	display: block;
-}
-
-.middle{
-	width: 1000px;
-	margin: auto auto;
-	position: static;
-	height: inherit;
-}
-
-.container {
-	width: 100%;
-	float: left;
-	overflow: hidden;
+.middle {
+width:device-width;
+margin:auto;
+position:static;
+height:inherit
 }
 
 .content {
-	padding: 0 0 0 50px;
-
+padding:0 0 0 50px
 }
 
-.header{
-	background: #101010;
-}
-
-.footer{
-	height: 100px;
-	background: #101010;
-}
-
-.topmenu{
-	float: right;
-}
-
-.button_menu {
-	display: inline-block;
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-	padding: 10px 20px;
-	border: none;
-	color: rgba(255,255,255,0.9);
-	-o-text-overflow: clip;
-	text-overflow: clip;
-	background: #404040;
-	width: 70px;
+.header {
+background:#101010
 }
 
 .footer {
-	margin-bottom:30px
-	width: 100%;
-	height: 66px;
-	background: #101010;
-	position: relative;
-	text-align: center;
+height:100px;
+background:#101010
+}
+
+.topmenu {
+float:none
+}
+
+.button_menu {
+display:inline-block;
+-webkit-box-sizing:content-box;
+-moz-box-sizing:content-box;
+box-sizing:content-box;
+padding:10px 20px;
+border:none;
+color:rgba(255,255,255,0.9);
+-o-text-overflow:clip;
+text-overflow:clip;
+background:#404040;
+width:70px
+}
+
+.footer {
+margin-bottom:30px;
+width:100%;
+height:66px;
+background:#101010;
+position:relative;
+text-align:center
 }
 
 A {
-	color: gold;
+color:#ffd700
 }
+
 A:visited {
-	color: gold;
+color:#ffd700
 }
+
 A:active {
-	color: gold;
+color:#ffd700
 }
